@@ -1,8 +1,5 @@
-## Various scripts
-
----
 ### envsave.py
- Small utility to saves Conda environments in a blink of an eye.
+ Small utility to save Conda environments in the blink of an eye.
  It's far from being bulletproof, but fulfils my current needs 
  (backup, deployment and traceability)
 
