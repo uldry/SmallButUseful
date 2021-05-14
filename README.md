@@ -5,7 +5,7 @@
 
     A command line interpreter cli_skeleton that uses argh, logging and tqdm.
 	
-### envsave.py
+### SaveCondaEnvs (envsave.py)
 	
 	A tool to export Conda environments in the blink of an eye, 
 	especially if-build as an executable with py2exe and put in your path.
