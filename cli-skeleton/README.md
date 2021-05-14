@@ -1,6 +1,3 @@
-## Various scripts
-
----
 ### cli_skeleton.py
 An 'as simple as possible but no simpler' command line interpreter skeleton
 that uses **agrh** for argument parsing/help + two additional ones:
