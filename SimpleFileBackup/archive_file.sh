@@ -58,10 +58,8 @@ else
  exit 1
 fi 
 
-# Keep only the past 5 days
-#find "$dest_dir" -name "*_$file_name" -type f -print0 | sort -z -r -t '_' -k 2 | tail -z -n +6 | xargs -0 -r rm
 
 # Keep only the last 5 version
-find "$dest_dir" -name "*_$file_name" -type f -print0 | sort -z -r -t '_' -k 2 | awk -vORS=$'\0' 'NR>5' | xargs -0 -r rm
+find "$dest_dir" -name "*_$file_name" -type f -printf '%T@ %p\n' | sort -rn | tail -n +6 | cut -d' ' -f2- | xargs -d '\n' rm
 #echo "$(date) - Removed old versions of '$file_name' if any." >> "$log_file"
 echo "Removed old versions of '$file_name'." 
